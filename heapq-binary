@@ -1,0 +1,75 @@
+#%%
+from heapq import *
+for i in range(int(input())):
+    n=int(input())
+    
+    q = [(1-n,1,n)]
+
+    order = []
+    ans = [0] * n
+    count=1
+
+    while(q):
+        val = heappop(q)
+        #print(val)
+        r = (val[1]+val[2])//2
+        order.append(r)
+        ans[r-1]=count
+        count+=1
+
+        if(val[2]-val[1]==1):
+            heappush(q,(0,val[2],val[2]))
+            continue
+
+        if(val[2]>val[1]):
+
+            heappush(q,(r+1-val[2],r+1,val[2]))
+            heappush(q,(val[1]-r+1,val[1],r-1))
+
+    print(*ans)
+
+
+#%%
+from heapq import *
+li = [(4,4),(6,6)]
+heapify(li)
+print(list(li))
+heappush(li,(2,2))
+print(list(li))
+
+#%% Code from vyom_goel
+
+#Giving first preference to the differnce between a and b and second prefernce to how close is a.. from the start
+def fun(a,b):
+    if a>b:
+        return
+    mid=(a+b)//2
+    c.append([b-a,-1*a])
+    fun(mid+1,b)
+    fun(a,mid-1)
+#Binary method 
+
+for _ in range(int(input())):
+    n = int(input())
+    arr=[0]*n
+    c=[]
+    fun(0,n-1)
+    #print(c)
+    
+    c=sorted(c,reverse=True) # this can sort the array list as well
+    #print(c)
+
+    for i in range(n):
+        d=c[i][0]//2-c[i][1] #This value defines it postions
+        arr[d]=i+1
+    
+    print(*arr)
+
+#%%
+from heapq import *
+li = []
+heapify(li)
+heappush(li,4)
+heappush(li,6)
+heappush(li,2)
+print()

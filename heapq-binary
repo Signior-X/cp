@@ -1,3 +1,6 @@
+## Link to this
+https://codeforces.com/contest/1353/problem/D
+
 #%%
 from heapq import *
 for i in range(int(input())):

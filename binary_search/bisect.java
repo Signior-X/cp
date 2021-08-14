@@ -15,6 +15,7 @@ class bisect {
         if (low < ar.length && ar[low] < key) low++;
 
         return low;
+        
     }
 
     public static int bisect_right(int ar[], int low, int high, int key) {

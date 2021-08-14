@@ -17,7 +17,8 @@ void print(vector<pair<int, int>> &v) { for (pair<int, int> &val : v) cout << va
 void print(vector<pair<ll, ll>> &v) { for (pair<ll, ll> &val : v) cout << val.first << " " << val.second << "\n"; }
 
 
-
 int main () {
-    int ar[] = {};
+
+
+
 }

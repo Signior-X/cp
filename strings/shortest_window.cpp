@@ -24,6 +24,10 @@ bool check_hash1_occupies_hash2(vector<int> hash1, vector<int> hash2) {
 
 
 int main () {
+
+	// Instead of having two hashes, we can also use only
+	// one hash and easily do the task also
+	// using the window shrinking approach
 	
 	string s = "azjsfkzts";
 	string ch = "sz";

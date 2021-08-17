@@ -19,6 +19,6 @@ void print(vector<pair<ll, ll>> &v) { for (pair<ll, ll> &val : v) cout << val.fi
 
 int main () {
 
-
+	cout << -7 % 3;
 
 }

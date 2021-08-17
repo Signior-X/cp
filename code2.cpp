@@ -9,7 +9,7 @@ using namespace std;
 #define vvi vector<vector<int>>
 
 void solve() {
-    
+
 }
 
 int main() {

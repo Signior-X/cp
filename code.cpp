@@ -16,9 +16,24 @@ void print(vector<ll> &v) { for(ll &val : v) cout << val << " "; cout << "\n"; }
 void print(vector<pair<int, int>> &v) { for (pair<int, int> &val : v) cout << val.first << " " << val.second << "\n"; }
 void print(vector<pair<ll, ll>> &v) { for (pair<ll, ll> &val : v) cout << val.first << " " << val.second << "\n"; }
 
+ll binExp(ll a, ll b) {
+
+    ll res = 1;
+
+    while(b) {
+        if (b & 1) res = (res * 1LL * a);
+        a = (a * 1LL * a);
+        b >>= 1;
+    }
+
+    return res;
+}
+
 
 int main () {
 
-	cout << -7 % 3;
+	for(ll i = 0; i < 64; i++) {
+		cout << binExp(2, i) << "\n";
+	}
 
 }

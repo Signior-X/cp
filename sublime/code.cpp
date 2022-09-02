@@ -16,5 +16,11 @@ int main() {
     int ans = bnexp(5, 2);
     cout << ans << "\n";
 
+    int t;
+    cin >> t;
+    while(t-- > 0) {
+        cout << t << "\n";
+    }
+
 	return 0;
 }
